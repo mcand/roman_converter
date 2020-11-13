@@ -10,7 +10,7 @@
     "format": "prettier-eslint --write **/*.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "André Furquim",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.2.0",
