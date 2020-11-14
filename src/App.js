@@ -1,10 +1,10 @@
 import React from 'react';
 import Button from './Button';
 
-const Translator = () => {
+const App = () => {
   return (
     <Button />
   )
 }
 
-export default Translator;
+export default App;

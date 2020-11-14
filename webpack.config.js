@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: {
-    translator: './src/Translator.js',
+    app: './src/App.js',
     example: './example/index.js',
   },
   plugins: [
