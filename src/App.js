@@ -1,9 +1,16 @@
 import React from 'react';
-import Button from './Button';
+import Menu from './Components/Menu'
+import Container from '@material-ui/core/Container';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 const App = () => {
   return (
-    <Button />
+    <>
+      <CssBaseline />
+      <Menu brand='Optiopay Test' />
+      <Container>
+      </Container>
+    </>
   )
 }
 
