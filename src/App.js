@@ -1,15 +1,33 @@
 import React from 'react';
 import Menu from './Components/Menu'
-import Container from '@material-ui/core/Container';
-import CssBaseline from '@material-ui/core/CssBaseline';
+import Grid from '@material-ui/core/Grid';
+import RomanNumberConverter from './Components/RomanNumberConverter';
+import Paper from '@material-ui/core/Paper';
+import { makeStyles } from '@material-ui/core/styles';
+
+export const useStyles = makeStyles(() => ({
+  paper: {
+    display: 'flex',
+    justifyContent: 'start',
+    flexDirection: 'column',
+    padding: 20,
+    height: '84vh',
+  },
+}));
 
 const App = () => {
+  const classes = useStyles();
+
   return (
     <>
-      <CssBaseline />
-      <Menu brand='Optiopay Test' />
-      <Container>
-      </Container>
+      <Grid container spacing={2}>
+        <Menu brand='Optiopay Test' />
+        <Grid item xs={12}>
+          <Paper className={classes.paper}>
+            <RomanNumberConverter />
+          </Paper>
+        </Grid>      
+      </Grid>
     </>
   )
 }
