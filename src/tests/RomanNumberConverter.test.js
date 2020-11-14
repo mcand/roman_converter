@@ -15,8 +15,8 @@ describe('RomanNumberConverter', () => {
   });
 
   it('renders 2 TextFields for each type of number', () => {
-    expect(wrapper.find(TextField).at(0).prop('label')).toBe('Roman Number');
-    expect(wrapper.find(TextField).at(1).prop('label')).toBe('Decimal Number');
+    expect(wrapper.find(TextField).at(0).prop('placeholder')).toBe('Roman Number');
+    expect(wrapper.find(TextField).at(1).prop('placeholder')).toBe('Decimal Number');
   });
 
   it('renders two buttons to convert numbers', () => {

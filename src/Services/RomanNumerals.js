@@ -1,7 +1,7 @@
 export default {
   toRoman(number) {
     if (!Number.isInteger(number) || (number <= 0 || number > 4000)) {
-      throw Error('You can only convert integers from 0 to 4000');
+      throw Error('Must be integer from 1 to 4000');
     }
 
     let romanNumber = '';
@@ -33,7 +33,9 @@ export default {
         index = number.indexOf(romanNumberList[romanNumber]);
       }
     }
-    num = num > 0 ? num : 0;
+    if (num == 0) {
+      throw Error('Invalid roman number');
+    }
     return num;
   },
 }

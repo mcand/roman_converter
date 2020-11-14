@@ -1,6 +1,6 @@
 import RomanNumerals from '../Services/RomanNumerals.js'
 
-const errorMessage = 'You can only convert integers from 0 to 4000';
+const errorMessage = 'Must be integer from 1 to 4000';
 
 describe('RomanNumbers', () => {
   describe('.toRoman', () => {
@@ -47,7 +47,7 @@ describe('RomanNumbers', () => {
     });
 
     it('shold not be possible to convert an invalid roman number', () => {
-      expect(RomanNumerals.fromRoman('JJJJJJ')).toBe(0);
+      expect(() => RomanNumerals.fromRoman('JJJJJJ')).toThrow('Invalid roman number');
     });
   });
 });
