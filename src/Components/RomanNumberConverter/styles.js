@@ -2,12 +2,12 @@ import styled from 'styled-components';
 import { makeStyles } from '@material-ui/core/styles';
 
 export const NumberType = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   padding: 20px;
-  &input {
-    margin-right: 40px;
+  input {
+    margin-right: 20px;
+  }
+  button {
+    float: right;
   }
 `;
 
