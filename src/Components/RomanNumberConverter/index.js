@@ -51,6 +51,7 @@ const RomanNumberConverter = () => {
     try {
       const result = RomanNumerals.toRoman(parseInt(decimalNumber));
       romanTextField.current.value = result;
+      setRomanNumber(result);
     } catch (error) {
       setRomanError(error.message);
     }

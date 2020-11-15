@@ -24,4 +24,6 @@ describe('RomanNumberConverter', () => {
     expect(wrapper.find(Button).at(1).text()).toBe('Convert');
   });
 
+  // I shold probably test the handlers functions and how they react
+  // to state changes
 });
