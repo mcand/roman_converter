@@ -24,6 +24,27 @@ describe('RomanNumberConverter', () => {
     expect(wrapper.find(Button).at(1).text()).toBe('Convert');
   });
 
-  // I shold probably test the handlers functions and how they react
-  // to state changes
+  it('can convert a roman to a decimal', () => {
+    wrapper.find(TextField).at(0).simulate('change', {target:{ value: 'V'}});
+    wrapper.find(Button).at(0).simulate('click');
+    expect(wrapper.find(TextField).at(1).prop('value')).toBe(5);
+  });
+
+  it('can convert a decimal number to decimal', () => {
+    wrapper.find(TextField).at(1).simulate('change', {target:{ value: '10'}});
+    wrapper.find(Button).at(1).simulate('click');
+    expect(wrapper.find(TextField).at(0).prop('value')).toBe('X');
+  });
+
+  it('should show an error when typed an invalid roman number', () => {
+    wrapper.find(TextField).at(0).simulate('change', {target: { value: '10'}});
+    wrapper.find(Button).at(0).simulate('click');
+    expect(wrapper.find(TextField).at(0).prop('helperText')).toBe('Invalid roman number');
+  });
+
+  it('should show an error when typed an invalid decimal number', () => {
+    wrapper.find(TextField).at(1).simulate('change', {target: { value: 'VVV'}});
+    wrapper.find(Button).at(1).simulate('click');
+    expect(wrapper.find(TextField).at(1).prop('helperText')).toBe('Must be integer from 1 to 4000');
+  });
 });

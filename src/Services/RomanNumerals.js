@@ -1,6 +1,7 @@
 export default {
   toRoman(number) {
-    if (!Number.isInteger(number) || (number <= 0 || number > 4000)) {
+    debugger
+    if ((!Number.isInteger(number)) || (number <= 0 || number > 4000)) {
       throw Error('Must be integer from 1 to 4000');
     }
 

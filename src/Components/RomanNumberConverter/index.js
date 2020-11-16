@@ -12,8 +12,6 @@ const RomanNumberConverter = () => {
   const [decimalNumber, setDecimalNumber] = useState('');
   const [romanError, setRomanError] = useState('');
   const [decimalError, setDecimalError] = useState('');
-  const romanTextField = React.createRef();
-  const decimalTextField = React.createRef();
 
   const handleRomanNumberChange = (event) => {
     setDecimalError(false)
@@ -40,36 +38,34 @@ const RomanNumberConverter = () => {
   const handleRomanNumber = () => {
     try {
       const result = RomanNumerals.fromRoman(romanNumber);
-      decimalTextField.current.value = result;
+      setDecimalNumber(result);
     } catch (error) {
       setDecimalError(error.message);
     }
-
   }
 
   const handleDecimalNumber = () => {
     try {
       const result = RomanNumerals.toRoman(parseInt(decimalNumber));
-      romanTextField.current.value = result;
       setRomanNumber(result);
     } catch (error) {
       setRomanError(error.message);
     }
-
   }
 
   return (
     <>
-      <Container maxWidth="xs" className={classes.root}>
+    <Container maxWidth="xs" className={classes.root}>
         <h2 className={classes.titleName}>Roman Number Converter</h2>
         <NumberType>
+
           <TextField
             id="roman-number"
             placeholder="Roman Number"
             onChange={handleRomanNumberChange}
-            inputRef={romanTextField}
             helperText={decimalError}
             error={hasDecimalError()}
+            value={romanNumber}
           />
         
           <Button
@@ -87,9 +83,9 @@ const RomanNumberConverter = () => {
             id="decimal-number"
             placeholder="Decimal Number"
             onChange={handleDecimalNumberChange}
-            inputRef={decimalTextField}
             helperText={romanError}
             error={hasRomanError()}
+            value={decimalNumber}
           />
           <Button
             variant="contained"
@@ -97,6 +93,7 @@ const RomanNumberConverter = () => {
             size="medium"
             startIcon={<TranslateIcon />}
             onClick={handleDecimalNumber}
+            value={decimalNumber}
           >
             Convert
           </Button>
