@@ -9,6 +9,6 @@
 `npm run dev`
 
 ## Building 
-`npm rnu build`
+`npm run build`
 
 Created by André Furquim <andreccomputacao@gmail.com>
