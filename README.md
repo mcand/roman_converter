@@ -1,6 +1,6 @@
 # Roman Number Converter
 
-[![Build Status](https://travis-ci.com/mcand/roman_converter.svg?branch=master)](https://travis-ci.com/mcand/roman_converter) [![Coverage Status](https://coveralls.io/repos/github/mcand/roman_converter/badge.svg?branch=master)](https://coveralls.io/github/mcand/roman_converter?branch=master)
+[![Build Status](https://travis-ci.com/mcand/roman_converter.svg?branch=master)](https://travis-ci.com/mcand/roman_converter) [![Coverage Status](https://coveralls.io/repos/github/mcand/roman_converter/badge.svg)](https://coveralls.io/github/mcand/roman_converter)
 
 ## Installing
 `npm install`
